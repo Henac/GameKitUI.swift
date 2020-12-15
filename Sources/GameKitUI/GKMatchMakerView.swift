@@ -88,6 +88,7 @@ public class MatchmakerViewController: UIViewController, GKMatchmakerViewControl
         super.viewWillAppear(animated)
         if let viewController = GKMatchmakerViewController(matchRequest: self.matchRequest) {
             viewController.matchmakerDelegate = self
+            viewController.matchmakingMode = .nearbyOnly
             self.addChild(viewController)
             viewController.view.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(viewController.view)
